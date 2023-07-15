@@ -22,8 +22,8 @@ class ReceiptTextLeftRight {
 
   String get html => '''
     <p class="full-width inline-block">
-      <${leftTextStyle.textStyleHTML} class="left ${leftTextStyle.textSizeHtml}">$leftText</${leftTextStyle.textStyleHTML}>
-      <${rightTextStyle.textStyleHTML} class="right ${rightTextStyle.textSizeHtml}">$rightText</${rightTextStyle.textStyleHTML}>
+      <${leftTextStyle.textStyleHTML} class="left" style="font-size:${leftTextStyle.textSizeHtml}">$leftText</${leftTextStyle.textStyleHTML}>
+      <${rightTextStyle.textStyleHTML} class="right" style="font-size:${rightTextStyle.textSizeHtml}">$rightText</${rightTextStyle.textStyleHTML}>
     </p>
   ''';
 }

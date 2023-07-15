@@ -32,19 +32,19 @@ class ReceiptTextStyle {
   String get textSizeHtml {
     switch (size) {
       case ReceiptTextSizeType.small:
-        return '12px'; // Adjust the pixel value as needed
-      case ReceiptTextSizeType.smallMedium:
-        return '14px'; // Adjust the pixel value as needed
-      case ReceiptTextSizeType.medium:
-        return '16px'; // Adjust the pixel value as needed
-      case ReceiptTextSizeType.mediumLarge:
-        return '18px'; // Adjust the pixel value as needed
-      case ReceiptTextSizeType.large:
         return '20px'; // Adjust the pixel value as needed
-      case ReceiptTextSizeType.extraLarge:
+      case ReceiptTextSizeType.smallMedium:
+        return '22px'; // Adjust the pixel value as needed
+      case ReceiptTextSizeType.medium:
         return '24px'; // Adjust the pixel value as needed
+      case ReceiptTextSizeType.mediumLarge:
+        return '26px'; // Adjust the pixel value as needed
+      case ReceiptTextSizeType.large:
+        return '28px'; // Adjust the pixel value as needed
+      case ReceiptTextSizeType.extraLarge:
+        return '30px'; // Adjust the pixel value as needed
       default:
-        return '16px'; // Adjust the pixel value as needed
+        return '20px'; // Adjust the pixel value as needed
     }
   }
 }
