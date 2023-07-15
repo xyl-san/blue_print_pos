@@ -33,9 +33,11 @@ class ReceiptTextStyle {
     switch (size) {
       case ReceiptTextSizeType.small:
         return '12px'; // Adjust the pixel value as needed
+      case ReceiptTextSizeType.smallMedium:
+        return '14px'; // Adjust the pixel value as needed
       case ReceiptTextSizeType.medium:
         return '16px'; // Adjust the pixel value as needed
-      case ReceiptTextSizeType.semiLarge:
+      case ReceiptTextSizeType.mediumLarge:
         return '18px'; // Adjust the pixel value as needed
       case ReceiptTextSizeType.large:
         return '20px'; // Adjust the pixel value as needed
