@@ -6,4 +6,5 @@ enum ReceiptTextSizeType {
   large,
   extraLarge,
   ultraLarge,
+  title,
 }
