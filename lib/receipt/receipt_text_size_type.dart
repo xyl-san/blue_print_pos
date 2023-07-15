@@ -1,1 +1,1 @@
-enum ReceiptTextSizeType { small, medium, large, extraLarge }
+enum ReceiptTextSizeType { small, medium, semiLarge, large, extraLarge }
