@@ -43,6 +43,8 @@ class ReceiptTextStyle {
         return '28px'; // Adjust the pixel value as needed
       case ReceiptTextSizeType.extraLarge:
         return '30px'; // Adjust the pixel value as needed
+      case ReceiptTextSizeType.ultraLarge:
+        return '32px'; // Adjust the pixel value as needed
       default:
         return '20px'; // Adjust the pixel value as needed
     }
