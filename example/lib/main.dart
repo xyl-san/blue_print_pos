@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:typed_data';
 
 import 'package:blue_print_pos/blue_print_pos.dart';
 import 'package:blue_print_pos/models/models.dart';
@@ -141,10 +140,10 @@ class _MyAppState extends State<MyApp> {
                         ],
                       ),
                     )
-                  : Center(
+                  : const Center(
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: const <Widget>[
+                        children: <Widget>[
                           Text(
                             'Scan bluetooth device',
                             style: TextStyle(fontSize: 24, color: Colors.blue),

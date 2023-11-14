@@ -1,7 +1,4 @@
 analyzer:
-  strong-mode:
-    implicit-casts: false
-    implicit-dynamic: false
   errors:
     missing_required_param: warning
     missing_return: warning
@@ -51,10 +48,10 @@ linter:
     - flutter_style_todos
     - hash_and_equals
     - implementation_imports
-    - iterable_contains_unrelated_type
+    - collection_methods_unrelated_type
     - library_names
     - library_prefixes
-    - list_remove_unrelated_type
+    # - list_remove_unrelated_type
     - no_adjacent_strings_in_list
     - no_duplicate_case_values
     - non_constant_identifier_names
