@@ -46,6 +46,12 @@ class BluePrintPos {
     return await BlueScanner.scan();
   }
 
+  Future<void> paperCut() async {
+    if (Platform.isAndroid) {
+      await _bluetoothAndroid?.paperCut();
+    }
+  }
+
   /// When connecting, reassign value [selectedDevice] from parameter [device]
   /// and if connection time more than [timeout]
   /// will return [ConnectionStatus.timeout]
