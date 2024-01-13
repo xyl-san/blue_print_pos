@@ -6,7 +6,7 @@ import 'package:blue_print_pos/models/models.dart';
 import 'package:blue_print_pos/receipt/receipt_section_text.dart';
 import 'package:blue_print_pos/scanner/blue_scanner.dart';
 import 'package:blue_thermal_printer/blue_thermal_printer.dart' as blue_thermal;
-import 'package:esc_pos_utils_plus/esc_pos_utils.dart';
+import 'package:esc_pos_utils_plus/esc_pos_utils_plus.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_blue_plus/flutter_blue_plus.dart' as flutter_blue;
 import 'package:flutter_blue_plus/gen/flutterblueplus.pb.dart' as proto;
@@ -146,7 +146,7 @@ class BluePrintPos {
   /// [feedCount] to create more space after printing process done
   /// [useCut] to cut printing process
   Future<void> printReceiptImage(
-    List<int> bytes, {
+    Uint8List bytes, {
     int width = 120,
     int feedCount = 0,
     bool useCut = false,
@@ -174,7 +174,7 @@ class BluePrintPos {
     int feedCount = 0,
     bool useCut = false,
   }) async {
-    final List<int> byteBuffer = await _getQRImage(data, size.toDouble());
+    final Uint8List byteBuffer = await _getQRImage(data, size.toDouble());
     printReceiptImage(
       byteBuffer,
       width: size,
@@ -223,7 +223,7 @@ class BluePrintPos {
   /// [feedCount] to generate byte buffer as feed in receipt.
   /// [useCut] to cut of receipt layout as byte buffer.
   Future<List<int>> _getBytes(
-    List<int> data, {
+    Uint8List data, {
     PaperSize paperSize = PaperSize.mm58,
     int customWidth = 0,
     int feedCount = 0,
