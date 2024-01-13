@@ -188,7 +188,7 @@ class BluePrintPos {
   Future<void> openDrawer() async {
     final CapabilityProfile profile = await CapabilityProfile.load();
     final Generator generator = Generator(PaperSize.mm58, profile);
-    generator.drawer();
+    generator.drawer(pin: PosDrawer.pin5);
   }
 
   /// Reusable method for print text, image or QR based value [byteBuffer]
