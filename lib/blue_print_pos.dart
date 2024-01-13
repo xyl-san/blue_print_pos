@@ -185,6 +185,12 @@ class BluePrintPos {
     );
   }
 
+  Future<void> openDrawer() async {
+    final CapabilityProfile profile = await CapabilityProfile.load();
+    final Generator generator = Generator(PaperSize.mm58, profile);
+    generator.drawer();
+  }
+
   /// Reusable method for print text, image or QR based value [byteBuffer]
   /// Handler Android or iOS will use method writeBytes from ByteBuffer
   /// But in iOS more complex handler using service and characteristic
