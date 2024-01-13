@@ -125,6 +125,7 @@ class BluePrintPos {
     bool useCut = false,
     bool useRaster = false,
     double duration = 0,
+    bool drawer = false,
     PaperSize paperSize = PaperSize.mm58,
   }) async {
     final Uint8List bytes = await contentToImage(
@@ -137,6 +138,7 @@ class BluePrintPos {
       feedCount: feedCount,
       useCut: useCut,
       useRaster: useRaster,
+      drawer: drawer,
     );
     _printProcess(byteBuffer);
   }
@@ -229,6 +231,7 @@ class BluePrintPos {
     int feedCount = 0,
     bool useCut = false,
     bool useRaster = false,
+    bool drawer = false,
   }) async {
     List<int> bytes = <int>[];
     final CapabilityProfile profile = await CapabilityProfile.load();
@@ -247,6 +250,9 @@ class BluePrintPos {
     }
     if (useCut) {
       bytes += generator.cut();
+    }
+    if (drawer) {
+      bytes += generator.drawer();
     }
     return bytes;
   }
